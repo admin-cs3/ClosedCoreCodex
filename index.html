@@ -60,6 +60,52 @@ p { color: #aaa9c4; }
 /* ClosedCoreCodex OS download center */
 #os-download-center { margin: 48px auto; }
 #os-download-center .os-intro { text-align:center; margin-bottom:24px; }
+
+/* ClosedCoreCodex — EFI / BIOS guide */
+#efi-bios-downloads {
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid rgba(167, 105, 255, 0.55);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #23143a, #0c0c19);
+  box-shadow: 0 0 24px rgba(124, 58, 237, 0.16);
+}
+#efi-bios-downloads > h2 {
+  color: #e9ddff;
+  text-shadow: 0 0 14px rgba(167, 105, 255, 0.35);
+}
+#efi-bios-downloads .efi-guide {
+  margin-top: 1.8rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(167, 105, 255, 0.35);
+  line-height: 1.75;
+}
+#efi-bios-downloads .efi-guide h3 {
+  margin-top: 1.4rem;
+  color: #c9a7ff;
+}
+#efi-bios-downloads .efi-guide p {
+  color: #e3ddec;
+}
+#efi-bios-downloads .efi-guide a {
+  color: #d6b7ff;
+  text-underline-offset: 3px;
+}
+#efi-bios-downloads .efi-guide pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid rgba(167, 105, 255, 0.45);
+  border-radius: 10px;
+  background: #090711;
+  color: #d8c1ff;
+  white-space: pre;
+}
+@media (max-width: 600px) {
+  #efi-bios-downloads .os-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 #os-download-center .os-cards {
   display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:18px;
@@ -381,30 +427,43 @@ aria-label="Afbeeldingengalerij">
 
 <section id="efi-bios-downloads">
   <h2>EFI / BIOS Downloads</h2>
-  <p>Kies het juiste bestand voor je hardware.</p>
+  <p>Choose the appropriate file for your hardware.</p>
   <div class="os-cards">
       <article class="os-card">
         <h3>EFI / BIOS 1</h3>
-        <a class="os-button os-primary" href="https://drive.google.com/file/d/1P6eGNH0B2HJut3dlv8WgBk5SXdV3xKhL/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download bestand 1</a>
+        <a class="os-button os-primary" href="https://drive.google.com/file/d/1P6eGNH0B2HJut3dlv8WgBk5SXdV3xKhL/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download File 1</a>
       </article>
       <article class="os-card">
         <h3>EFI / BIOS 2</h3>
-        <a class="os-button os-primary" href="https://drive.google.com/file/d/1dJdXQm93lpK2wp0SrwPyOaWEhVqRA1Sy/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download bestand 2</a>
+        <a class="os-button os-primary" href="https://drive.google.com/file/d/1dJdXQm93lpK2wp0SrwPyOaWEhVqRA1Sy/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download File 2</a>
       </article>
       <article class="os-card">
         <h3>EFI / BIOS 3</h3>
-        <a class="os-button os-primary" href="https://drive.google.com/file/d/1ZXPEV3VAdzYlwAis2PCxSvoWK1VKHScX/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download bestand 3</a>
+        <a class="os-button os-primary" href="https://drive.google.com/file/d/1ZXPEV3VAdzYlwAis2PCxSvoWK1VKHScX/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download File 3</a>
       </article>
       <article class="os-card">
         <h3>EFI / BIOS 4</h3>
-        <a class="os-button os-primary" href="https://drive.google.com/file/d/1Hl2GwK62PeIGpV_pL-EQMGr0GACcWcRq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download bestand 4</a>
+        <a class="os-button os-primary" href="https://drive.google.com/file/d/1Hl2GwK62PeIGpV_pL-EQMGr0GACcWcRq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download File 4</a>
       </article>
       <article class="os-card">
         <h3>EFI / BIOS 5</h3>
-        <a class="os-button os-primary" href="https://drive.google.com/file/d/1FZDqlNjMIpleuwdcc1zjlui1YN7a3CEk/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download bestand 5</a>
+        <a class="os-button os-primary" href="https://drive.google.com/file/d/1FZDqlNjMIpleuwdcc1zjlui1YN7a3CEk/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Download File 5</a>
       </article>
   </div>
   <p class="os-warning">Controleer compatibiliteit voordat je een BIOS- of EFI-bestand gebruikt.</p>
+
+  <div class="efi-guide">
+    <h3>Booting EFI Files</h3>
+    <p>After formatting your USB drive as FAT32-LBA and copying one of these BIOS or EFI files to it, can your system boot EFI files? For example, <code>CLOVERX64.efi</code>.</p>
+
+    <h3>Create a macOS Installation USB</h3>
+    <p>On a compatible Apple computer, download the macOS installer application (<code>.app</code>) and place it in the <code>/Applications</code> folder. Follow <a href="https://support.apple.com/nl-nl/102662" target="_blank" rel="noopener noreferrer">Apple's official guide to creating a bootable macOS installer</a>.</p>
+    <p>If the installer comes in an archive or package, extract it using an appropriate tool and follow the package instructions. If you do not have access to a Mac, ask an Apple service provider or computer retailer whether they can help you create a bootable installer.</p>
+
+    <h3>Terminal Command — macOS Monterey</h3>
+    <p>Replace <code>MyVolume</code> with the name of your USB volume. This command erases the selected volume, so check the volume name carefully before running it.</p>
+    <pre><code>sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+  </div>
 </section>
 
 <section id="closedcorecodex-footer-image"
