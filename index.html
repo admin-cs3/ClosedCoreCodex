@@ -134,6 +134,18 @@ p { color: #aaa9c4; }
 })();
 </script>
 
+
+<section class="image-gallery" aria-label="Afbeeldingengalerij">
+  <img src="static/images/galerij-1.jpg" alt="Afbeelding 1">
+  <img src="static/images/galerij-2.jpg" alt="Afbeelding 2">
+  <img src="static/images/galerij-3.png" alt="Afbeelding 3">
+</section>
+<style>
+.image-gallery { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:16px; margin:40px auto 20px; max-width:1200px; }
+.image-gallery img { width:calc(33.333% - 12px); max-height:300px; object-fit:contain; border-radius:10px; }
+@media (max-width:650px) { .image-gallery img { width:100%; max-height:260px; } }
+</style>
+
 </main>
 </body>
 </html>
