@@ -12,10 +12,28 @@ body {
   font-family: Arial, sans-serif;
 }
 header {
+  position: relative;
   padding: 50px 20px;
   text-align: center;
   background: linear-gradient(135deg, #211442, #080811);
 }
+@media (max-width: 650px) {
+  header { padding: 35px 15px 125px; }
+  header h1 { font-size: 32px; }
+}
+.header-portrait {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  width: 140px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px double #d4af37;
+  outline: 2px solid #8f6b19;
+  outline-offset: 3px;
+  box-shadow: 0 0 12px rgba(212,175,55,.65);
+}
+
 h1 { font-size: 42px; }
 h1 span { color: #a78bfa; }
 main { max-width: 1000px; margin: auto; padding: 25px; }
@@ -114,6 +132,7 @@ p { color: #aaa9c4; }
 </head>
 <body>
 <header>
+  <img class="header-portrait" src="static/images/closedcorecodex-logo.png" alt="ClosedCoreCodex">
   <h1>Closed<span>Core</span>Codex</h1>
   <p>BIOS · UEFI · EFI · macOS Bootloader</p>
 </header>
