@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClosedCoreCodex</title>
+<style>
+body {
+  margin: 0;
+  background: #080811;
+  color: #f1f0ff;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #211442, #080811);
+}
+h1 { font-size: 42px; }
+h1 span { color: #a78bfa; }
+main { max-width: 1000px; margin: auto; padding: 25px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: #121222;
+  border: 1px solid #514276;
+  border-radius: 12px;
+  padding: 20px;
+}
+.visual {
+  background: #211b3d;
+  color: #67e8f9;
+  padding: 35px 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+p { color: #aaa9c4; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Closed<span>Core</span>Codex</h1>
+  <p>BIOS · UEFI · EFI · macOS Bootloader</p>
+</header>
+<main>
+  <h2>Firmware Explorer</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="visual">BIOS / LEGACY</div>
+      <h3>BIOS</h3>
+      <p>Klassieke firmware en hardware-initialisatie.</p>
+    </div>
+    <div class="card">
+      <div class="visual">UEFI / EFI</div>
+      <h3>UEFI</h3>
+      <p>Moderne firmware en het opstartproces.</p>
+    </div>
+    <div class="card">
+      <div class="visual">SECURE BOOT</div>
+      <h3>Secure Boot</h3>
+      <p>Beveiliging van de opstartketen.</p>
+    </div>
+    <div class="card">
+      <div class="visual">OPENCORE</div>
+      <h3>macOS Bootloader</h3>
+      <p>EFI, config.plist en hardwarecompatibiliteit.</p>
+    </div>
+  </div>
+  <h2>Afbeeldingen</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Hyves — internetnostalgie</h3>
+      <img src="static/images/hyves-pagina.png"
+           alt="Hyves-pagina als visuele referentie"
+           style="width:100%;height:auto;border-radius:8px">
+    </div>
+    <div class="card">
+      <h3>Kipadvertentie</h3>
+      <a href="static/images/kip-advertentie.png" target="_blank"
+         rel="noopener noreferrer">
+        <img src="static/images/kip-advertentie.png"
+             alt="Klik om de kipadvertentie groter te bekijken"
+             style="width:100%;height:auto;border-radius:8px">
+      </a>
+      <p>Klik op de afbeelding om deze te openen.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
+
