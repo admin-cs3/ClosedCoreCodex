@@ -88,6 +88,52 @@ p { color: #aaa9c4; }
       <p>Klik op de afbeelding om deze te openen.</p>
     </div>
   </div>
+
+<h2>Openbare technische kennisbank</h2>
+<p>Doorzoek de 11 artikelen over BIOS, UEFI en firmware.</p>
+<input id="search" type="search" placeholder="Zoek in de kennisbank..." style="width:100%;box-sizing:border-box;padding:12px;margin:12px 0;border-radius:8px">
+<div id="knowledge" class="grid">Kennisbank laden...</div>
+<script>
+(async () => {
+  const target = document.getElementById('knowledge');
+  const search = document.getElementById('search');
+  try {
+    const response = await fetch('public_knowledge.json');
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const articles = await response.json();
+    function render() {
+      const q = search.value.trim().toLowerCase();
+      const filtered = articles.filter(a =>
+        [a.title, a.content, a.source, a.kind].some(v =>
+          String(v || '').toLowerCase().includes(q)
+        )
+      );
+      target.replaceChildren();
+      if (!filtered.length) {
+        target.textContent = 'Geen artikelen gevonden.';
+        return;
+      }
+      for (const a of filtered) {
+        const card = document.createElement('article');
+        card.className = 'card';
+        const title = document.createElement('h3');
+        title.textContent = a.title;
+        const body = document.createElement('p');
+        body.style.whiteSpace = 'pre-wrap';
+        body.style.color = '#f1f0ff';
+        body.textContent = a.content || 'Geen inhoud beschikbaar.';
+        card.append(title, body);
+        target.append(card);
+      }
+    }
+    search.addEventListener('input', render);
+    render();
+  } catch (error) {
+    target.textContent = 'De kennisbank kon niet worden geladen. Controleer of public_knowledge.json aanwezig is.';
+  }
+})();
+</script>
+
 </main>
 </body>
 </html>

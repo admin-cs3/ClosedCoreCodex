@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "UEFI basis",
+    "content": "UEFI initialiseert hardware en start de bootprocedure.",
+    "source": "Eigen testnotitie",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:04:21+00:00"
+  },
+  {
+    "id": 2,
+    "title": "UEFI basis",
+    "content": "UEFI initialiseert hardware en start de bootprocedure.",
+    "source": "Eigen testnotitie",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:04:45+00:00"
+  },
+  {
+    "id": 3,
+    "title": "TianoCore EDK II",
+    "content": "TianoCore EDK II is een open-source ontwikkelomgeving voor UEFI-firmware. Het wordt gebruikt om UEFI-firmware te bouwen en te testen.",
+    "source": "Eerste technische notitie",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:06:36+00:00"
+  },
+  {
+    "id": 4,
+    "title": "BIOS en legacy firmware",
+    "content": "BIOS is firmware die bij het opstarten hardware initialiseert en het starten van een besturingssysteem ondersteunt. Legacy BIOS-opstart verschilt van UEFI-opstart. De precieze mogelijkheden hangen af van de firmware en hardware.",
+    "source": "ClosedCoreCodex: startnotitie, verificatie nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:33:57+00:00"
+  },
+  {
+    "id": 5,
+    "title": "UEFI firmware-interface",
+    "content": "UEFI definieert interfaces tussen platformfirmware en software tijdens het opstarten. Het ondersteunt onder meer bootbeheer en het laden van EFI-applicaties. UEFI is niet hetzelfde als één specifieke firmware-implementatie.",
+    "source": "UEFI-specificatie en documentatie, broncontrole nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:34:05+00:00"
+  },
+  {
+    "id": 6,
+    "title": "EFI System Partition (ESP)",
+    "content": "De EFI System Partition is een speciale partitie die bootbestanden bevat voor UEFI-systemen. EFI-applicaties en bootloaders kunnen vanaf deze partitie worden geladen. De exacte indeling en bestanden verschillen per besturingssysteem.",
+    "source": "UEFI-specificatie en documentatie, broncontrole nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:34:11+00:00"
+  },
+  {
+    "id": 7,
+    "title": "EFI System Partition (ESP)",
+    "content": "De EFI System Partition is een speciale partitie die bootbestanden bevat voor UEFI-systemen. EFI-applicaties en bootloaders kunnen vanaf deze partitie worden geladen. De exacte indeling en bestanden verschillen per besturingssysteem.",
+    "source": "UEFI-specificatie en documentatie, broncontrole nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:34:20+00:00"
+  },
+  {
+    "id": 8,
+    "title": "TianoCore EDK II",
+    "content": "EDK II is een open-source ontwikkelomgeving en implementatiebasis voor UEFI-firmware. Het bevat bouwsystemen, libraries, drivers en modules waarmee firmwareplatforms kunnen worden ontwikkeld.",
+    "source": "TianoCore EDK II-projectdocumentatie, broncontrole nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:34:28+00:00"
+  },
+  {
+    "id": 9,
+    "title": "Firmware en hardwarecompatibiliteit",
+    "content": "Firmware initialiseert en beheert hardware op platformniveau. Compatibiliteit, energieverbruik en prestaties hangen onder meer af van hardwareontwerp, firmwareconfiguratie, drivers en besturingssysteem. Wijzigingen aan firmware vereisen passende documentatie en voorzorgsmaatregelen.",
+    "source": "Algemene technische notitie, verificatie nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:34:38+00:00"
+  },
+  {
+    "id": 10,
+    "title": "GPT-partitietabel",
+    "content": "GUID Partition Table (GPT) is een indeling voor partitietabellen op opslagapparaten. GPT wordt vaak gebruikt op moderne UEFI-systemen, maar GPT en UEFI zijn verschillende concepten. De partitietabel beschrijft de partities op een schijf.",
+    "source": "UEFI-specificatie en documentatie, broncontrole nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:37:53+00:00"
+  },
+  {
+    "id": 11,
+    "title": "UEFI Secure Boot",
+    "content": "Secure Boot is een UEFI-beveiligingsmechanisme dat tijdens het opstarten controleert of EFI-programma's voldoen aan het ingestelde vertrouwensbeleid. De werking hangt af van sleutels, firmware-instellingen en de ondersteuning van het platform.",
+    "source": "UEFI-specificatie en platformdocumentatie, broncontrole nodig",
+    "kind": "technical_note",
+    "status": "unverified",
+    "created_at": "2026-10-19T17:38:00+00:00"
+  }
+]
