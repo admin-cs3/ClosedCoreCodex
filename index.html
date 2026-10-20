@@ -103,6 +103,13 @@ p { color: #aaa9c4; }
   #os-download-center .os-showcase { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 
+
+.fat32-lba-neon-note { color:#39ff14 !important; text-shadow:0 0 5px #39ff14, 0 0 12px rgba(57,255,20,.75); }
+
+.fat32-lba-neon-title { color:#39ff14 !important; text-shadow:0 0 5px #39ff14, 0 0 12px rgba(57,255,20,.75); }
+::selection { background:#ffe600; color:#111111; text-shadow:none; }
+
+#fat32-lba-info-desk, #fat32-lba-info-desk h2, #fat32-lba-info-desk p, #fat32-lba-info-desk strong { color: #bf00ff !important; text-shadow: 0 0 5px #bf00ff, 0 0 12px rgba(191,0,255,.8) !important; }
 </style>
 </head>
 <body>
@@ -203,7 +210,7 @@ p { color: #aaa9c4; }
 
 <section id="os-download-center" aria-labelledby="os-download-title">
   <div class="os-intro">
-    <h2 id="os-download-title">FAT32 LBA Formatter</h2>
+    <h2 id="os-download-title" class="fat32-lba-neon-title">FAT32-LBA Formatter</h2>
     <p>Kies je besturingssysteem en download het bijbehorende formatteringsscript.</p>
   </div>
   <p class="os-warning"><strong>Let op:</strong> formatteren wist gegevens op de gekozen schijf.
@@ -246,11 +253,10 @@ exit
       <img src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/p4vs7twtl5iwgfghs4fs.png" alt="Windows, Apple macOS en Linux" loading="lazy">
     </a>
   </div>
-  <p class="os-warning">Opmerking: Windows' ingebouwde FAT32-formattering kan beperkingen hebben
-  bij grote volumes. Controleer de uitkomst van DiskPart; ga niet uit van succes als er een foutmelding verschijnt.</p>
+  <p class="fat32-lba-neon-note">Opmerking: Windows' ingebouwde formattering kan beperkingen hebben bij grote volumes. Deze tool is bedoeld voor FAT32-LBA. Controleer of DiskPart zonder fouten is voltooid en controleer achteraf het MBR-partitietype 0x0C.</p>
 </section>
 
-<section class="image-gallery"
+<section id="fat32-lba-info-desk"><h2 style="color:#00E5FF !important; text-shadow:0 0 5px #00E5FF, 0 0 12px rgba(0,229,255,.75);">FAT32-LBA Info Desk</h2><p><strong>FAT32:</strong> een breed ondersteund bestandssysteem met een maximale bestandsgrootte van 4 GiB min 1 byte.</p><p><strong>LBA:</strong> Logical Block Addressing, waarmee schijfsectoren logisch worden geadresseerd.</p><p><strong>MBR-types:</strong> 0x0C duidt FAT32-LBA aan; 0x0B duidt FAT32 aan; 0x1C is de verborgen FAT32-LBA-variant.</p><p><strong>Compatibiliteit:</strong> FAT32-LBA maakt een schijf niet vanzelf opstartbaar. Firmware, partitietabel en bootbestanden spelen ook mee.</p><p><strong>Veiligheid:</strong> formatteren wist gegevens. Controleer de juiste schijf en maak vooraf een back-up.</p></section><section class="image-gallery"
 aria-label="Afbeeldingengalerij">
   <img src="static/images/galerij-1.jpg" alt="Afbeelding 1">
   <img src="static/images/galerij-2.jpg" alt="Afbeelding 2">
