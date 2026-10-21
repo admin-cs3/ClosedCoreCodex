@@ -595,7 +595,26 @@ aria-label="Afbeeldingengalerij">
 
   <div class="efi-guide">
     <h3>Booting EFI Files</h3>
-    <p>After formatting your USB drive as FAT32-LBA and copying one or more of these BIOS/EFI files to it, boot your computer from the USB drive to access the available boot interface. From there, you can browse for and launch compatible EFI system files, such as <code>CLOVERX64.efi</code>, <code>BOOTx64.efi</code>, or <code>OpenRuntime.efi</code>, if supported by your system.</p>
+
+    <img
+      src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/93bl8gh9d8c3tkcdr7vs.png"
+      alt="ClosedCoreCodex EFI and BIOS boot guide"
+      loading="lazy"
+      style="display:block;width:100%;max-width:900px;height:auto;margin:18px auto;border-radius:12px;"
+    >
+
+    <h3>How to Prepare Your Bootable USB</h3>
+    <ol>
+      <li>Format the USB drive as FAT32-LBA. Back up any files first, because formatting erases data.</li>
+      <li>Copy the appropriate EFI / BIOS downloads to the USB drive.</li>
+      <li>Install Clover, OpenCore, or both in the USB drive's EFI folder, following the relevant bootloader instructions.</li>
+      <li>Prepare a macOS Monterey installer or another compatible macOS installer. Use Apple's official instructions where applicable.</li>
+    </ol>
+
+    <h3>Boot Your PC in UEFI Mode</h3>
+    <p>Restart your PC and press the motherboard's boot-menu key, commonly F12, F2, or End (the key varies by manufacturer). Select the USB device's UEFI entry when available.</p>
+    <p>If a text-based boot prompt appears, use the arrow keys and Enter as indicated on screen to navigate the available options. In a UEFI file browser, open the appropriate EFI folder and select a compatible bootloader file, such as <code>BOOTx64.efi</code> or <code>CLOVERX64.efi</code>, depending on your setup.</p>
+    <p><code>OpenRuntime.efi</code> is normally an OpenCore support driver, not a standalone bootloader. FAT32-LBA formatting alone does not guarantee that a USB drive is bootable; the partition layout, firmware mode, and boot files must also be compatible.</p>
 
     <h3>Create a macOS Installation USB</h3>
     <p>On a compatible Apple computer, download the macOS installer application (<code>.app</code>) and place it in the <code>/Applications</code> folder. Follow <a href="https://support.apple.com/nl-nl/102662" target="_blank" rel="noopener noreferrer">Apple's official guide to creating a bootable macOS installer</a>.</p>
@@ -606,6 +625,10 @@ aria-label="Afbeeldingengalerij">
     <pre><code>sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
   </div>
 </section>
+
+  <div class="closedcore-new-image" style="max-width:1100px;margin:35px auto 20px;padding:0 20px;box-sizing:border-box;">
+    <img src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/a82lfw1gs4ygq6toj1e6.png" alt="ClosedCoreCodex" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+  </div>
 
 
 
