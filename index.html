@@ -437,57 +437,7 @@ exit
 
 <section id="fat32-lba-info-desk"><h2 style="color:#00E5FF !important; text-shadow:0 0 5px #00E5FF, 0 0 12px rgba(0,229,255,.75);">FAT32-LBA Info Desk</h2><p><strong>FAT32:</strong> een breed ondersteund bestandssysteem met een maximale bestandsgrootte van 4 GiB min 1 byte.</p><p><strong>LBA:</strong> Logical Block Addressing, waarmee schijfsectoren logisch worden geadresseerd.</p><p><strong>MBR-types:</strong> 0x0C duidt FAT32-LBA aan; 0x0B duidt FAT32 aan; 0x1C is de verborgen FAT32-LBA-variant.</p><p><strong>Compatibiliteit:</strong> FAT32-LBA maakt een schijf niet vanzelf opstartbaar. Firmware, partitietabel en bootbestanden spelen ook mee.</p><p><strong>Veiligheid:</strong> formatteren wist gegevens. Controleer de juiste schijf en maak vooraf een back-up.</p></section>
 
-<section id="clover-opencore-downloads"
-         aria-labelledby="ccc-bootloader-title">
-  <h2 id="ccc-bootloader-title">EFI Bootloader Downloads</h2>
-  <p style="text-align:center;color:#bdb1d5">
-    Ontdek de twee bekende bootloaders voor je EFI-setup.
-  </p>
-
-  <div class="ccc-bootloader-grid">
-    <article class="ccc-bootloader-card">
-      <div class="ccc-bootloader-logo" aria-label="OpenCore">
-        <span class="ccc-mark">OC</span>
-        <span>OpenCore</span>
-      </div>
-      <h3>OpenCore Bootloader</h3>
-      <p>Bekijk de officiële releases van OpenCorePkg bij Acidanthera.</p>
-      <a class="ccc-bootloader-button"
-         href="https://github.com/acidanthera/OpenCorePkg/releases"
-         target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-             aria-hidden="true">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <path d="m7 10 5 5 5-5"/>
-          <path d="M12 15V3"/>
-        </svg>
-        <span>Download OpenCore</span>
-      </a>
-    </article>
-
-    <article class="ccc-bootloader-card">
-      <div class="ccc-bootloader-logo" aria-label="Clover">
-        <span class="ccc-mark">🍀</span>
-        <span>Clover</span>
-      </div>
-      <h3>Clover Bootloader</h3>
-      <p>Bekijk de officiële releases van CloverBootloader op GitHub.</p>
-      <a class="ccc-bootloader-button"
-         href="https://github.com/CloverHackyColor/CloverBootloader/releases"
-         target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-             aria-hidden="true">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <path d="m7 10 5 5 5-5"/>
-          <path d="M12 15V3"/>
-        </svg>
-        <span>Download Clover</span>
-      </a>
-    </article>
-  </div>
-</section><section class="image-gallery"
+<section class="image-gallery"
 aria-label="Afbeeldingengalerij">
   <img src="static/images/galerij-1.jpg" alt="Afbeelding 1">
   <img src="static/images/galerij-2.jpg" alt="Afbeelding 2">
@@ -605,14 +555,11 @@ aria-label="Afbeeldingengalerij">
   <div class="efi-guide">
     <h3>Booting EFI Files</h3>
 
-    <img
-      src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/93bl8gh9d8c3tkcdr7vs.png"
-      alt="ClosedCoreCodex EFI and BIOS boot guide"
-      loading="lazy"
-      style="display:block;width:100%;max-width:900px;height:auto;margin:18px auto;border-radius:12px;"
-    >
-
-    <h3>How to Prepare Your Bootable USB</h3>
+    <div class="efi-illustrations" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;max-width:900px;margin:18px auto;">
+      <img src="static/images/balena-etcher.png" alt="ClosedCoreCodex illustratie 1" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+      <img src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/icsnmvrxv9n360z4s83d.png" alt="ClosedCoreCodex illustratie 2" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+    </div>
+<h3>How to Prepare Your Bootable USB</h3>
     <ol>
       <li>Format the USB drive as FAT32-LBA. Back up any files first, because formatting erases data.</li>
       <li>Copy the appropriate EFI / BIOS downloads to the USB drive.</li>
@@ -636,7 +583,7 @@ aria-label="Afbeeldingengalerij">
 </section>
 
   <div class="closedcore-new-image" style="max-width:1100px;margin:35px auto 20px;padding:0 20px;box-sizing:border-box;">
-    <img src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/a82lfw1gs4ygq6toj1e6.png" alt="ClosedCoreCodex" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
+    <img src="static/images/closedcorecodex-main.png" alt="ClosedCoreCodex" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px;">
   </div>
 
 
