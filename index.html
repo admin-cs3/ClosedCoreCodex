@@ -237,14 +237,17 @@ p { color: #aaa9c4; }
            style="width:100%;height:auto;border-radius:8px">
     </div>
     <div class="card">
-      <h3>Kipadvertentie</h3>
-      <a href="static/images/kip-advertentie.png" target="_blank"
-         rel="noopener noreferrer">
-        <img src="static/images/kip-advertentie.png"
-             alt="Klik om de kipadvertentie groter te bekijken"
-             style="width:100%;height:auto;border-radius:8px">
-      </a>
-      <p>Klik op de afbeelding om deze te openen.</p>
+      <h3>YouTube-video</h3>
+      <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#000;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/wGgHNTRHQXQ"
+          title="YouTube-video"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </div>
 
@@ -495,6 +498,20 @@ aria-label="Afbeeldingengalerij">
 #closedcore-windows-macos-note .closedcore-windows-warning a { color:#ff7777; font-weight:bold; text-decoration:underline; }
 @media (max-width:650px) { #closedcore-windows-macos-note .closedcore-windows-gallery { grid-template-columns:1fr; } }
 </style>
+
+<section id="closedcore-youtube-player" style="max-width:1060px;margin:32px auto;padding:20px;box-sizing:border-box;">
+  <h2 style="text-align:center;">♫ ClosedCoreCodex Music</h2>
+  <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#000;">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/wGgHNTRHQXQ"
+      title="ClosedCoreCodex Music"
+      style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
 <section id="closedcorecodex-footer-image"
          aria-label="ClosedCoreCodex footer"
