@@ -576,6 +576,63 @@ aria-label="Afbeeldingengalerij">
     <p>On a compatible Apple computer, download the macOS installer application (<code>.app</code>) and place it in the <code>/Applications</code> folder. Follow <a href="https://support.apple.com/nl-nl/102662" target="_blank" rel="noopener noreferrer">Apple's official guide to creating a bootable macOS installer</a>.</p>
     <p>If the installer comes in an archive or package, extract it using an appropriate tool and follow the package instructions. If you do not have access to a Mac, ask an Apple service provider or computer retailer whether they can help you create a bootable installer.</p>
 
+
+    <div id="macos-installer-commands">
+      <h3>More macOS USB Installer Commands</h3>
+      <p>Replace <code>MyVolume</code> with the name of your USB volume. These commands erase the selected volume. Verify the USB volume and the exact installer application name before running a command.</p>
+      <div class="macos-command-grid">
+      <article class="macos-command-card">
+        <h4>macOS 27 Golden Gate</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ 27\ Golden\ Gate.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Tahoe 26</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Tahoe.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Sequoia 15</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Sequoia.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Sonoma 14</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Sonoma.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Ventura 13</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Big Sur 11</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Catalina 10.15</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS Mojave 10.14</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>macOS High Sierra 10.13</h4>
+        <pre><code>sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
+      </article>
+      <article class="macos-command-card">
+        <h4>OS X El Capitan 10.11</h4>
+        <pre><code>sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app</code></pre>
+      </article>
+      </div>
+    </div>
+    <style>
+      #macos-installer-commands { margin-top: 24px; }
+      #macos-installer-commands .macos-command-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      #macos-installer-commands .macos-command-card { min-width: 0; padding: 14px; border: 1px solid #8b5cf6; border-radius: 10px; background: #100d1d; }
+      #macos-installer-commands h4 { color: #7CFC00; margin-top: 0; }
+      #macos-installer-commands pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+      #macos-installer-commands code { font-size: 0.9em; }
+      @media (max-width: 650px) { #macos-installer-commands .macos-command-grid { grid-template-columns: 1fr; } }
+    </style>
+
     <h3>Terminal Command — macOS Monterey</h3>
     <p>Replace <code>MyVolume</code> with the name of your USB volume. This command erases the selected volume, so check the volume name carefully before running it.</p>
     <pre><code>sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</code></pre>
