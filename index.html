@@ -472,6 +472,30 @@ aria-label="Afbeeldingengalerij">
   </div>
 </section>
 
+
+
+<section id="closedcore-windows-macos-note">
+  <div class="closedcore-windows-gallery">
+    <img src="images/closedcore-image-1.png" alt="ClosedCoreCodex image 1" loading="lazy">
+    <img src="images/closedcore-image-2.png" alt="ClosedCoreCodex image 2" loading="lazy">
+  </div>
+  <div class="closedcore-windows-warning">
+    <h2>WINDOWS ALTERNATIVE — macOS USB INSTALLER</h2>
+    <p>You can prepare a bootable macOS USB installer using Windows and compatible tools. Obtain a compatible installer image from a legitimate source. Not every image format is supported by every tool.</p>
+    <p>Use the official balenaEtcher application to write a compatible image to a USB drive. This erases the selected USB drive.</p>
+    <p><a href="https://etcher.balena.io/" target="_blank" rel="noopener noreferrer">Download balenaEtcher — Official Website</a></p>
+  </div>
+</section>
+<style>
+#closedcore-windows-macos-note { max-width:1100px; margin:35px auto; padding:20px; box-sizing:border-box; }
+#closedcore-windows-macos-note .closedcore-windows-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:center; margin-bottom:24px; }
+#closedcore-windows-macos-note .closedcore-windows-gallery img { display:block; width:100%; height:auto; border-radius:12px; }
+#closedcore-windows-macos-note .closedcore-windows-warning { border:2px solid #e53935; border-radius:12px; padding:22px; background:#1e080c; color:#ff5252; line-height:1.7; }
+#closedcore-windows-macos-note .closedcore-windows-warning h2 { color:#ff3030; margin-top:0; }
+#closedcore-windows-macos-note .closedcore-windows-warning a { color:#ff7777; font-weight:bold; text-decoration:underline; }
+@media (max-width:650px) { #closedcore-windows-macos-note .closedcore-windows-gallery { grid-template-columns:1fr; } }
+</style>
+
 <section id="closedcorecodex-footer-image"
          aria-label="ClosedCoreCodex footer"
          style="width:100%;margin:32px 0 0;padding:0;">
