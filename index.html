@@ -494,11 +494,48 @@ aria-label="Afbeeldingengalerij">
   <img src="static/images/galerij-3.png" alt="Afbeelding 3">
 </section>
 <style>
+
+.radio-new-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  align-items:center;
+}
+.radio-new-grid img {
+  display:block;
+  width:100%;
+  max-height:300px;
+  object-fit:contain;
+  border-radius:10px;
+}
+.radio-new-grid .radio-new-fourth {
+  grid-column:2;
+}
+@media (max-width:650px) {
+  .radio-new-grid {
+    grid-template-columns:1fr;
+  }
+  .radio-new-grid .radio-new-fourth {
+    grid-column:1;
+  }
+}
+
 .image-gallery { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:16px; margin:40px auto 20px; max-width:1200px; }
 .image-gallery img { width:calc(33.333% - 12px); max-height:300px; object-fit:contain; border-radius:10px; }
 @media (max-width:650px) { .image-gallery img { width:100%; max-height:260px; } }
 </style>
 
+
+
+<section id="closedcore-radio-new-gallery" aria-label="ClosedCoreCodex Radio afbeeldingen"
+ style="max-width:1100px;margin:30px auto 10px;padding:0 24px;box-sizing:border-box;">
+  <div class="radio-new-grid">
+    <img src="static/images/closedcore-radio-new-1.png" alt="ClosedCoreCodex Radio afbeelding 1" loading="lazy">
+    <img src="static/images/closedcore-radio-new-2.png" alt="ClosedCoreCodex Radio afbeelding 2" loading="lazy">
+    <img src="static/images/closedcore-radio-new-3.png" alt="ClosedCoreCodex Radio afbeelding 3" loading="lazy">
+    <img class="radio-new-fourth" src="static/images/closedcore-radio-new-4.png" alt="ClosedCoreCodex Radio afbeelding 4" loading="lazy">
+  </div>
+</section>
 
 <section id="closedcorecodex-music" aria-label="ClosedCoreCodex muziek"
  style="max-width:1100px;margin:40px auto;padding:24px;box-sizing:border-box;">
