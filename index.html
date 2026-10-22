@@ -183,6 +183,37 @@ p { color: #aaa9c4; }
                  0 0 12px rgba(57, 255, 20, 0.35);
 }
 
+
+/* Profielfoto met Grieks-geïnspireerde gouden rand */
+
+header.site-banner .profile-frame {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  z-index: 2;
+  width: 142px;
+}
+header.site-banner .header-portrait {
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+@media (max-width: 650px) {
+  header.site-banner .profile-frame {
+    top: 10px;
+    right: 10px;
+    width: 88px;
+    padding: 4px;
+  }
+}
+
 </style>
 
 <style>
@@ -208,10 +239,19 @@ p { color: #aaa9c4; }
 
 </head>
 <body>
-<header>
-  <img class="header-portrait" src="static/images/closedcorecodex-logo.png" alt="ClosedCoreCodex">
-  <h1>Closed<span>Core</span>Codex</h1>
-  <p>BIOS · UEFI · EFI · macOS Bootloader</p>
+<header class="site-banner" style="position:relative;margin:0;padding:0;">
+  <img
+    src="static/images/closedcorecodex-banner.png"
+    alt="ClosedCoreCodex — BIOS, UEFI, EFI en macOS Bootloader"
+    style="display:block;width:100%;height:auto;max-width:100%;margin:0 auto;"
+  >
+  <div class="profile-frame">
+    <img
+      class="header-portrait"
+      src="static/images/closedcorecodex-profile-gold.jpeg"
+      alt="ClosedCoreCodex profielfoto"
+    >
+  </div>
 </header>
 <main>
   <h2>Firmware Explorer</h2>
@@ -240,13 +280,17 @@ p { color: #aaa9c4; }
   <h2>Afbeeldingen</h2>
   <div class="grid">
     <div class="card">
-      <h3>Hyves — internetnostalgie</h3>
-      <img src="https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/5nduafoyd8mbya5mq0qm.png"
-           alt="Hyves-pagina als visuele referentie"
-           style="width:100%;height:auto;border-radius:8px">
+      <h3 style="text-align:center;margin-left:auto;margin-right:auto;">MacOS sierra -AI- ClosedCoreCodex</h3>
+      <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#000;">
+        <video controls preload="metadata" playsinline
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border:0;">
+          <source src="static/videos/petal_20220510_093403.mp4" type="video/mp4">
+          Je browser ondersteunt deze videospeler niet.
+        </video>
+      </div>
     </div>
     <div class="card">
-      <h3>♫ Glennis Grace — Music</h3>
+      <h3 style="text-align:center;margin-left:auto;margin-right:auto;">♫ Glennis Grace — Music</h3>
       <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#000;">
         <video controls preload="metadata" playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border:0;"><source src="static/videos/glennis-grace.mp4" type="video/mp4">Je browser ondersteunt deze videospeler niet.</video>
       </div>
@@ -515,9 +559,12 @@ aria-label="Afbeeldingengalerij">
 </style>
 
 
-<section id="closedcorecodex-domo" style="text-align:center;margin:35px auto;padding:10px;">
-  <img src="static/images/domo.png" alt="Domo" loading="lazy"
-       style="display:block;width:396px;max-width:100%;height:auto;margin:0 auto;border-radius:12px;">
+<section id="closedcorecodex-domo" style="margin:35px auto;padding:10px;">
+  <div style="display:grid;grid-template-columns:0.704fr 1.3fr 0.64fr;gap:16px;align-items:center;width:100%;">
+    <img src="static/images/domo.png" alt="Domo" loading="lazy" style="display:block;width:100%;height:auto;min-width:0;border-radius:12px;">
+    <img src="static/images/closedcorecodex-left-logo.png" alt="ClosedCoreCodex logo" loading="lazy" style="display:block;width:100%;height:auto;min-width:0;border-radius:12px;">
+    <img src="static/images/chrome-icn.webp" alt="Chrome icon" loading="lazy" style="display:block;width:100%;height:auto;min-width:0;border-radius:12px;">
+  </div>
 </section>
 
 <section id="closedcorecodex-soundcloud-player" style="max-width:1000px;margin:35px auto;padding:20px;box-sizing:border-box;">
@@ -701,6 +748,21 @@ aria-label="Afbeeldingengalerij">
 
 
 </main>
+
+<!-- Dock Lion: volledige schermbreedte op elk apparaat -->
+<div id="dock-lion-fullwidth" style="
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  padding:0;
+  line-height:0;
+  overflow:hidden;">
+  <img src="static/images/dock-lion.png"
+       alt="Dock Lion"
+       loading="lazy"
+       style="display:block;width:100%;max-width:none;height:auto;object-fit:contain;">
+</div>
 </body>
 </html>
 
