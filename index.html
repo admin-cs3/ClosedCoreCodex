@@ -237,6 +237,30 @@ header.site-banner .header-portrait {
 }
 </style>
 
+
+<style id="knowledge-grid-12-fix">
+#knowledge.grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 16px;
+  align-items: stretch;
+}
+#knowledge.grid > * {
+  min-width: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  #knowledge.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 520px) {
+  #knowledge.grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="site-banner" style="position:relative;margin:0;padding:0;">
@@ -306,7 +330,7 @@ header.site-banner .header-portrait {
 </div>
 
 <h2>Openbare technische kennisbank</h2>
-<p>Doorzoek de 11 artikelen over BIOS, UEFI en firmware.</p>
+<p>Doorzoek de 12 artikelen in de ClosedCoreCodex-kennisbank.</p>
 <input id="search" type="search" placeholder="Zoek in de kennisbank..." style="width:100%;box-sizing:border-box;padding:12px;margin:12px 0;border-radius:8px">
 
 <div class="card msn-dev-card">
@@ -346,12 +370,44 @@ header.site-banner .header-portrait {
       for (const a of filtered) {
         const card = document.createElement('article');
         card.className = 'card';
+        if (a.image) {
+          const image = document.createElement('img');
+          image.src = a.image;
+          image.alt = a.title;
+          image.loading = 'lazy';
+          image.style.width = '100%';
+          image.style.aspectRatio = String(a.id) === '12' ? '3 / 4' : '16 / 9';
+          image.style.objectFit = String(a.id) === '12' ? 'fill' : 'cover';
+          image.style.display = 'block';
+          image.style.borderRadius = '8px';
+          image.style.marginBottom = '12px';
+
+          if (String(a.id) === '12') {
+            card.style.height = '390px';
+            card.style.padding = '0';
+            card.style.position = 'relative';
+            card.style.overflow = 'hidden';
+            image.style.width = '100%';
+            image.style.height = '100%';
+            image.style.aspectRatio = 'auto';
+            image.style.objectFit = 'fill';
+            image.style.maxHeight = 'none';
+            image.style.marginBottom = '0';
+            image.style.borderRadius = '8px';
+          }
+
+          card.append(image);
+        }
         const title = document.createElement('h3');
         title.textContent = a.title;
         const body = document.createElement('p');
         body.style.whiteSpace = 'pre-wrap';
         body.style.color = '#f1f0ff';
         body.textContent = a.content || 'Geen inhoud beschikbaar.';
+        if (String(a.id) === '12') {
+          title.style.display = 'none';
+          body.style.display = 'none';
+        }
         card.append(title, body);
         target.append(card);
       }
