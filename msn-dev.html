@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSN DEV | ClosedCoreCodex</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 30px 18px 50px;
+      background: #10131c;
+      color: #f2f5ff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main { max-width: 1050px; margin: auto; }
+    header { text-align: center; margin-bottom: 32px; }
+    .logo { font-size: clamp(34px, 7vw, 58px); font-weight: bold; }
+    .logo span { color: #1687ff; }
+    header p { color: #aebbd0; }
+    .back {
+      display: inline-block;
+      margin: 8px 0 24px;
+      color: #58aaff;
+      text-decoration: none;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      gap: 22px;
+    }
+    figure {
+      margin: 0;
+      padding: 14px;
+      background: #1a2030;
+      border: 1px solid #303b51;
+      border-radius: 12px;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+    }
+    figcaption { padding-top: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="index.html">← Terug naar ClosedCoreCodex</a>
+    <header>
+      <div class="logo">MSN <span>DEV</span></div>
+      <p>Messenger-interface, command prompt en Windows Live Messenger</p>
+    </header>
+    <section class="gallery">
+      <figure>
+        <img src="documents/msn-interface.jpg" alt="MSN-interface">
+        <figcaption>MSN Interface</figcaption>
+      </figure>
+      <figure>
+        <img src="documents/commandpromt.jpg" alt="Command Prompt">
+        <figcaption>Command Prompt</figcaption>
+      </figure>
+      <figure>
+        <img src="documents/messenger-live-windows.jpg" alt="Windows Live Messenger">
+        <figcaption>Windows Live Messenger</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
