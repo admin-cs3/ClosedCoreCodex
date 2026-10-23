@@ -334,16 +334,33 @@ header.site-banner .header-portrait {
 <input id="search" type="search" placeholder="Zoek in de kennisbank..." style="width:100%;box-sizing:border-box;padding:12px;margin:12px 0;border-radius:8px">
 
 <div class="card msn-dev-card">
-  <a href="https://drive.google.com/drive/folders/147_1VQAVvXbPM1pusXOI-aOB6-yRWWfs?usp=sharing"
-     target="_blank" rel="noopener noreferrer"
-     style="display:block;text-align:center;text-decoration:none;color:inherit;">
-    <img src="documents/msn.png" alt="MSN-logo — open Google Drive"
-         style="width:100%;max-width:180px;height:auto;display:block;margin:0 auto 12px;">
-  </a>
-  <a href="msn-dev.html"
-     style="display:block;text-align:center;text-decoration:none;">
-    <h3 style="margin-top:0;color:#1687ff;">MSN DEV</h3>
-  </a>
+  <div style="display:flex;align-items:center;justify-content:space-evenly;gap:18px;flex-wrap:wrap;width:94%;margin:0 auto;">
+    <a href="https://www.nieuwsblad.be/economie/bedrijven/bart-smit-verdwijnt-uit-straatbeeld/57076567.html" target="_blank" rel="noopener noreferrer">
+      <img src="documents/bartsmit.jpg" alt="Bart Smit"
+         style="width:100%;max-width:228px;height:228px;object-fit:contain;">
+    </a>
+
+    <div style="text-align:center;">
+      <a href="https://drive.google.com/drive/folders/147_1VQAVvXbPM1pusXOI-aOB6-yRWWfs?usp=sharing"
+         target="_blank" rel="noopener noreferrer">
+        <img src="documents/msn.png" alt="MSN-logo"
+             style="width:100%;max-width:130px;height:120px;object-fit:contain;">
+      </a>
+      <a href="msn-dev.html" style="display:block;text-decoration:none;">
+        <h3 style="margin-top:0;color:#1687ff;">MSN DEV</h3>
+      </a>
+    </div>
+
+    <a href="https://echtebakker.nl/" target="_blank" rel="noopener noreferrer">
+      <img src="documents/Bakker-Gold-1.png" alt="Bakker Gold"
+         style="width:100%;max-width:120px;height:120px;object-fit:contain;">
+    </a>
+    <a href="https://www.bakkerbart.nl/" target="_blank" rel="noopener noreferrer">
+      <img src="documents/bakkerbart.png" alt="Bakker Bart"
+         style="width:100%;max-width:120px;height:120px;object-fit:contain;">
+    </a>
+
+  </div>
 </div>
 
 <div id="knowledge" class="grid">Kennisbank laden...</div>
@@ -415,7 +432,8 @@ header.site-banner .header-portrait {
     search.addEventListener('input', render);
     render();
   } catch (error) {
-    target.textContent = 'De kennisbank kon niet worden geladen. Controleer of public_knowledge.json aanwezig is.';
+    console.error('ClosedCoreCodex-kennisbankfout:', error);
+    target.textContent = 'Kennisbankfout: ' + (error.message || String(error));
   }
 })();
 </script>
